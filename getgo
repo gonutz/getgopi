@@ -1,8 +1,8 @@
 #!/bin/bash
 : "${goversion:?Set the Go version, e.g. \"\goversion=1.9.2; ./goget\"}"
 wget https://storage.googleapis.com/golang/go$goversion.linux-armv6l.tar.gz
-tar -C /usr/local -xzf go$goversion.linux-386.tar.gz
-rm go$goversion.linux-386.tar.gz
+tar -C /usr/local -xzf go$goversion.linux-armv6l.tar.gz
+rm go$goversion.linux-armv6l.tar.gz
 me=`who | awk '{print \$1}'`
 mkdir "/home/$me/go"
 chown $me "/home/$me/go"
